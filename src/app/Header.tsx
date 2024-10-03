@@ -33,9 +33,9 @@ export default function Header(){
     return(
     <header>
         <nav style={{color: 'black'}}>
-        <Link href="/"><h1 className='top-logo'>LOGO</h1></Link>
+        <Link href="/"><h1 className='top-logo'>RCC</h1></Link>
         <div className='search'>
-            <input placeholder='search' className='search-input-field'></input>
+            <input placeholder='Search' className='search-input-field' ></input>
         </div>
         <ul className="">
             <li className='tooltip'><Link href="/account"><IconAccountCircleOutline/>
@@ -48,13 +48,13 @@ export default function Header(){
         </nav>
         <menu>
             <ul className='menu-items'>
-                <li><Link href="/">Kitchen</Link></li>
-                <li><Link href="/">Dining</Link></li>
-                <li><Link href="/">Bedroom</Link></li>
-                <li><Link href="/">Living</Link></li>
-                <li><Link href="/">Washroom</Link></li>
-                <li><Link href="/">Kids Room</Link></li>
-                <li><Link href="/">Garden</Link></li>
+                <li><Link href="/">Makeup</Link></li>
+                <li><Link href="/">Skin</Link></li>
+                <li><Link href="/">Hair</Link></li>
+                <li><Link href="/">Appliances</Link></li>
+                <li><Link href="/">Natural</Link></li>
+                <li><Link href="/">Fragrances</Link></li>
+                <li><Link href="/">Accessories</Link></li>
             </ul>
         </menu>
     </header>

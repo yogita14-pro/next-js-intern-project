@@ -11,6 +11,8 @@
 //     }
 // `;
 
+import Products from "../components/@products/page";
+
 // function Products(){
 //     const {loading, error, data}= useQuery(GET_PRODUCTS);
 
@@ -32,10 +34,13 @@
 
 export default async function Home(){
 
-    const res=await fetch('https://dummyjson.com/products');
-    const productsData= await res.json();
+    // const res=await fetch('https://dummyjson.com/products');
+    // const productsData= await res.json();
     return (
-        <ul>
+        <main>
+        <img style={{width: '100%', height: '70%' }} src="https://t3.ftcdn.net/jpg/07/09/06/38/360_F_709063880_4O0ZMHg4Nyk8rbK2qR1JrtjLZX9M1U97.jpg"></img>
+        <Products/>
+        {/* <ul>
             <li>This is th home page!!!</li>
             {
             productsData.products.map((item:any)=>{
@@ -45,6 +50,7 @@ export default async function Home(){
                 }
                 )
             }
-        </ul>
+        </ul> */}
+        </main>
     )
 }
