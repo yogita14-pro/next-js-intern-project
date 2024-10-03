@@ -115,9 +115,9 @@ export default function Footer(){
         </section>
         <section className="bottom-footer-section">
             <ul>
-                <li>Brand 1</li>
-                <li>Brand 2</li>
-                <li>Brand 3</li>
+                <li>Nykka</li>
+                <li>Mamaearth</li>
+                <li>Tatacliq</li>
             </ul>
             <ul>
                 <li>
@@ -133,7 +133,7 @@ export default function Footer(){
                 <li>Privacy Policy</li>
                 <li>Your Privacy Rights & Choices</li>
             </ul>
-            <p>© 2002 - 2024 by Logo LLC, 12th floor, Angkor west building, Bagmane Conseltation Business Park, Banglore, KA, India, 560016</p>
+            <p>© 2002 - 2024 by RCC LLC, 12th floor, Angkor west building, Bagmane Conseltation Business Park, Banglore, KA, India, 560016</p>
         </section>
     </footer>
     );

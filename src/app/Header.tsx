@@ -33,7 +33,7 @@ export default function Header(){
     return(
     <header>
         <nav style={{color: 'black'}}>
-        <Link href="/"><h1 className='top-logo'>RCC</h1></Link>
+        <Link href="/"><h1 className='top-logo'>RCClub</h1></Link>
         <div className='search'>
             <input placeholder='Search' className='search-input-field' ></input>
         </div>
