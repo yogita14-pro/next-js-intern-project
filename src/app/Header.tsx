@@ -35,7 +35,7 @@ export default function Header(){
         <nav style={{color: 'black'}}>
         <Link href="/"><h1 className='top-logo'>RCClub</h1></Link>
         <div className='search'>
-            <input placeholder='Search' className='search-input-field' ></input>
+            <input placeholder='Find more here...' className='search-input-field' ></input>
         </div>
         <ul className="">
             <li className='tooltip'><Link href="/account"><IconAccountCircleOutline/>
