@@ -1,14 +1,12 @@
 'use client' // Error components must be Client Components
-
+import Image from 'next/image'
 import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 
 export default function Error({
   error,
-  reset,
 }: {
   error: Error & { digest?: string }
-  reset: () => void
 }) {
    const router=useRouter();
   useEffect(() => {
@@ -17,7 +15,7 @@ export default function Error({
   }, [error])
   return (
     <div className='error505'>
-        <img src='https://i.pinimg.com/564x/7f/6a/54/7f6a54e73c809a94520f38d01d5350c4.jpg'/>
+        <Image src='https://i.pinimg.com/564x/7f/6a/54/7f6a54e73c809a94520f38d01d5350c4.jpg' alt='error-illustration' width='400' height="400" priority={false}/>
       <h2>Something went wrong!</h2>
       <button className='cartbutton'
         onClick={

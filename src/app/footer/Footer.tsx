@@ -23,11 +23,11 @@ const BRANDS=[
   'Tropicana'
 ]
 const ICONS=[
-  <IconBxlFacebookCircle/>,
-<IconLogoPinterest/>,
-<IconInstagram/>,
-<IconBxlTiktok/>,
-<IconYoutube/>
+  <IconBxlFacebookCircle key="facebook"/>,
+<IconLogoPinterest key="pinterest"/>,
+<IconInstagram key="instragram"/>,
+<IconBxlTiktok key="tiktok"/>,
+<IconYoutube key="youtube"/>
 ]
 export default function Footer(){
     return(

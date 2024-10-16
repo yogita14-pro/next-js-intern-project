@@ -1,8 +1,9 @@
 "use client";
 import React from "react";
 import { useCart } from "../../context/cartContext";
+import { ProductData } from "../../types";
 
-function CartButtons({ productData }: { productData: any }) {
+function CartButtons({ productData }: { productData:ProductData}) {
   const { addToCart } = useCart();
   const handleAddToCart = () => {
     addToCart({
