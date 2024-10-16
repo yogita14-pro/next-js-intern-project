@@ -1,11 +1,14 @@
-
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import Link from "next/link";
+import Image from "next/image";
 import Rating from "./Rating";
+import { CartItem, ProductData } from "../app/types";
 
 export default function Allproducts({
   allproductsData,
 }: {
-  allproductsData: any
+  allproductsData: ProductData;
 }) {
   return (
     <div className="products-home">
@@ -13,18 +16,21 @@ export default function Allproducts({
         <h1>All Products</h1>
         <p>A-List of Obsess overs</p>
         <ul className="products-list">
-          {allproductsData.products.edges.map((item: any) => {
+          {allproductsData.products.edges.map((item: CartItem) => {
             return (
               <li key={item.node.id} className="item">
                 <Link
                   href={`/products/${item.node.id}`}
                   target="_blank"
                 >
-                  <img
+                  <Image
                     src={item.node.thumbnail.url}
                     alt="product-thumbnail"
                     className="product-thumbnail"
-                  ></img>
+                    width='200'
+                    height='200'
+                    layout="responsive"
+                  ></Image>
                   <div className="item-text">
                     <h2 className="title-home">{item.node.name}</h2>
                     <Rating page={"product"} />

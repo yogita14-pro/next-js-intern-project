@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client'
+import { ApolloProvider } from '@apollo/client'
 import client from './apolloClient';
 export default function Providers({children}:{ children: React.ReactNode }) {
   return (

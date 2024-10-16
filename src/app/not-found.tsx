@@ -1,9 +1,10 @@
 import Link from 'next/link'
+import Image from 'next/image'
 export default function NotFound() {
   return (
     <div className='error-page'>
         <section className='illustration-error'>
-        <img src='https://i.pinimg.com/564x/6e/79/bd/6e79bd03740466297664aa754d3c9c7a.jpg' alt='empty cart'></img>
+        <Image src='https://i.pinimg.com/564x/6e/79/bd/6e79bd03740466297664aa754d3c9c7a.jpg' alt='empty cart' width='600' height="500" ></Image>
         </section>
         <section className='details-error'>
         <h1 className='error404'>404</h1>

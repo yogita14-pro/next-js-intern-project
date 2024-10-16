@@ -1,15 +1,15 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 "use client";
 import React from "react";
 import { useCart } from "../context/cartContext";
 import styles from "./Cart.module.css";
-export function CartItemsQuantity({cart, setCheckout}){
-  let totalprice = 0;
-  cart.map(
-    (item) =>
-      (totalprice += Number(
-        (item.quantity * parseFloat(item.price - item.price / 10)).toFixed(2)
-      ))
-  );
+import { CartItem } from "../types";
+export function CartItemsQuantity({cart, setCheckout}:{cart: CartItem, setCheckout:boolean}){
+  const totalprice=cart.reduce((price:number, item:CartItem) =>
+      {return price += Number(
+        (item.quantity * parseFloat(item.price - item.price / 10)).toFixed(2))
+      }, 0);
   return(
     <section className="total-pricing">
     <section className="item-total">
