@@ -1,7 +1,8 @@
-export default function Cart(){
-    return(
-        <>
-        This is cart!!!
-        </>
-    )
+import CartData from "./CartData";
+export default function Cart() {
+  return (
+    <div>
+      <CartData/>
+    </div>
+  );
 }
