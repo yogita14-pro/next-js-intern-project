@@ -106,14 +106,32 @@
     flex-direction: column;
     flex-wrap: wrap;
   }
+  .item-details>img{
+    height: 300px;
+    width: 80%;
+  }
+}
+@media(max-width: 620px){
+  .cart{
+    display: flex;
+    flex-direction: column;
+  }
+  .items{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
   .cart-list{
     display: flex;
     flex-direction: column;
     height: auto;
-    width: auto;
+    width: 100%;
   }
   .item-details{
     display: flex;
     flex-direction: column;
+  }
+  .item-total-amount {
+    text-align: right;
   }
 }
