@@ -11,7 +11,7 @@ export default function ItemsList({cart,removeFromCart, updateCartQuantity}:{car
   return (
     <section>
       <h1>My Shopping Cart</h1>
-    <ul>
+    <ul className='items'>
     {cart?.map((item) => (
       <li key={item.id} className={styles["cart-list"]}>
         <div className="item-details">
