@@ -96,3 +96,24 @@
   padding: 20px 0;
   border-bottom: 1px solid grey;
 }
+@media(max-width: 768px){
+  .cart{
+    display: flex;
+    flex-direction: column;
+  }
+  .items{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .cart-list{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+  }
+  .item-details{
+    display: flex;
+    flex-direction: column;
+  }
+}

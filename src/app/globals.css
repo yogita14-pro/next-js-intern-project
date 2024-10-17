@@ -48,6 +48,14 @@ nav{
   z-index: 1000;
   color: black;
 }
+.icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-icon{
+  visibility: hidden;
+}
 nav>ul{
   display: flex;
   justify-content: space-between;
@@ -174,7 +182,7 @@ nav>ul>li{
   padding: 20px 9%;
 }
 .products-home>div>h1{
-  padding: 50px 0 0 0;
+  padding: 5% 0 0 0;
 }
 .products-list{
   display: flex;
@@ -473,17 +481,26 @@ footer{
 /* ----Responsive Design---- */
 @media (max-width: 768px) {
   header{
+    position: fixed;
+    z-index: 1000;
+  }
+  body{
+    padding-top: 140px;
+  }
+  .menu-icon{
+    visibility: visible;
+  }
+  header{
     height: 140px;
-    position:sticky;
+    position: fixed;
   }
   .search{
     position: absolute;
-    top: 84px;
+    top: 72px;
     left: 0px;
     background-color: white;
     padding: 10px;
     width: 100%;
-    z-index: 20;
   }
 
   .container{
@@ -502,6 +519,9 @@ footer{
   .product {
       width: calc(50% - 40px); /* 2 products per row */
   }
+  .products-list>li{
+    width: 42%;
+  }
   .product-item{
     display: flex;
     flex-direction: column;
@@ -510,9 +530,28 @@ footer{
   .single-product-details>section>p{
     text-align: left;
   }
+  /*----not found page---- */
+  .error-page{
+    margin: 0px 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .illustration-error>img{
+    width: 100%;
+    height: auto;
+  }
+  /*---- Cart page---- */
+  .cart{
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 480px) {
+  header{
+    position: fixed;
+    z-index: 1000;
+  }
   nav{
     padding: 10px;
   }

@@ -152,3 +152,17 @@ return (
   </svg>
 );
 }
+
+export function IconBxMenu(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      height="2em"
+      width="2em"
+      {...props}
+    >
+      <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
+    </svg>
+  );
+}
