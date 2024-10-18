@@ -9,7 +9,6 @@ export const CartContext = createContext<CartContextType | undefined>(undefined)
 export const CartProvider=({ children }: { children: React.ReactNode })=>{
     const [cart, setCart] = useState<CartItem[]>([]);
     const [isHydrated, setIsHydrated] = useState(false);  // Track if cart is hydrated from localStorage
-    const [checkout, setCheckout]=useState(false);
     // Hydrate cart from localStorage, but only on client-side
     useEffect(() => {
       if (typeof window !== 'undefined') {
@@ -65,7 +64,7 @@ export const CartProvider=({ children }: { children: React.ReactNode })=>{
     // Track the total qunatity of items present in the cart
     const totalQuantity = cart.reduce((total:number, item: CartItem) => total + item.quantity, 0);
     if (!isHydrated) return null
-    return <CartContext.Provider value={{cart, setCart, addToCart, removeFromCart, updateCartQuantity, totalQuantity, setCheckout, checkout}}>{children}</CartContext.Provider>
+    return <CartContext.Provider value={{cart, setCart, addToCart, removeFromCart, updateCartQuantity, totalQuantity}}>{children}</CartContext.Provider>
 }
 
 export const useCart = (): CartContextType => {

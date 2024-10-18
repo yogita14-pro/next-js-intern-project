@@ -7,22 +7,18 @@ import EmptyCart from "./EmptyCart";
 import styles from "./Cart.module.css";
 import { CartItemsQuantity } from "./items-quantity";
 import ItemsList from "./ItemsList";
-import Ordercheckout from "../ordercheckout/page";
 
 export default function CartData() {
-  const { cart, removeFromCart, updateCartQuantity, checkout, setCheckout} = useCart();
-
+  const { cart, removeFromCart, updateCartQuantity} = useCart();
   return (
     <div>
-      { checkout ? <Ordercheckout/> :
-     (cart.length===0 ? <EmptyCart/> :
+     {cart.length===0 ? <EmptyCart/> :
     <div className={styles.cart}>
       <ItemsList cart={cart} removeFromCart={removeFromCart} updateCartQuantity={updateCartQuantity}/>
       <section>
-      <CartItemsQuantity cart={cart} setCheckout={setCheckout}/>
+      <CartItemsQuantity cart={cart}/>
       </section>
     </div>
-    )
     }
     </div>
   );

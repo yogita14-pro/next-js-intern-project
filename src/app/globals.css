@@ -598,6 +598,14 @@ footer{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.item-details>img{
+  margin-right: 0;
+}
+.tooltip{
+  padding: 0 5px;
 }
 .cart-list{
   display: flex;
@@ -615,5 +623,9 @@ footer{
 .item-details>img{
   height: 300px;
   width: auto;
+}
+.cart-illustrations{
+  width: 90%;
+  height: auto;
 }
 }

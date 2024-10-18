@@ -5,7 +5,8 @@ import React from "react";
 import { useCart } from "../context/cartContext";
 import styles from "./Cart.module.css";
 import { CartItem } from "../types";
-export function CartItemsQuantity({cart, setCheckout}:{cart: CartItem, setCheckout:boolean}){
+import Link from "next/link";
+export function CartItemsQuantity({cart}:{cart: CartItem}){
   const totalprice=cart.reduce((price:number, item:CartItem) =>
       {return price += Number(
         (item.quantity * parseFloat(item.price - item.price / 10)).toFixed(2))
@@ -34,7 +35,7 @@ export function CartItemsQuantity({cart, setCheckout}:{cart: CartItem, setChecko
             <h4>Total</h4>
             <p>${(totalprice+10.50).toFixed(2)}</p>
           </div>
-          <button className="cartbutton" style={{width: '100%'}} onClick={()=>setCheckout(true)}>Proceed to Checkout</button>
+          <Link href="/ordercheckout"><button className="cartbutton" style={{width: '100%'}}>Proceed to Checkout</button></Link>
         </section>
     </section>
   )
